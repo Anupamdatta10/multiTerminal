@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>node-pty Electron example</title>
+    <link rel="Stylesheet" href="./node_modules/xterm/css/xterm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      div{
+        margin-bottom:10px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body id="main_body">
+    <select name="cars" id="terminalname">
+     
+     
+    </select>
+    <button id="add_terminal">add terminal</button>
+
+  </body>
+  
+  <script>
+    require('./renderer.js')
+  </script>
+</html>
