@@ -6,7 +6,6 @@ var Terminal = require("xterm").Terminal;
 var terminalName = document.getElementById("terminalname");
 var Add_div=document.getElementById("add_terminal");
 
-const screen_powershell = document.getElementById("xterm_powershell");
 const body=document.getElementById("main_body");
 // Initialize node-pty with an appropriate shell
 //const shell = process.env[os.platform() === 'win32' ? 'COMSPEC' : 'SHELL'];
@@ -14,18 +13,12 @@ const PAUSE = '\x13';   // XOFF
 const RESUME = '\x11';  // XON
 
 var xterm=[] 
-let xterm_new=new Terminal()
+
 var ptyProcess =[] 
 var i=0
 let xtem_obj;
 let pty_op
-const ptyProcess_new = pty.spawn("powershell.exe", [],{handleFlowControl: true}, {
-    name: "xterm-color_new",
-    cols: 80,
-    rows: 30,
-    cwd: process.cwd(),
-    env: process.env,
-});
+
 
 Add_div.addEventListener("click",function(){
     addTterminal()
